@@ -1,0 +1,105 @@
+.name-for-menu {
+  color: black;
+  margin-left: 3vh;
+  text-align: center;
+}
+
+.blurred {
+  filter: blur(10px);
+}
+
+nav {
+  background-color: #23e783;
+}
+
+.brand-logo.for-nav {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.black {
+  background-color: black;
+  color: #23e783;
+}
+
+.border-for-logo {
+  border: 3px solid black;
+  text-align: center;
+}
+
+img.logo-for-menu {
+  width: 40%;
+  display: block;
+  margin: 3vh auto;
+}
+
+.home-image {
+  width: 70%;
+  display: block;
+  margin: auto;
+  margin-top: 7vh;
+}
+
+.input-field {
+  border: 3px solid black;
+  background-color: black;
+  border-radius: 15px;
+  margin: auto 5vh;
+  padding: 2vh;
+}
+
+.main-text {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  color: #23e783;
+}
+
+body {
+  background: black;
+}
+
+p.main-text {
+  margin-top: 0;
+}
+
+.close-icon{
+  margin-top: 3vh;
+}
+
+.inline {
+  display: inline-block;
+}
+
+.submit-button {
+  color: white;
+  background: black;
+  width: 60%;
+  display: block;
+  margin: auto;
+  border: 3px solid white;
+}
+
+.about-title, .contact-title  {
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+
+.about-para, .contact-para {
+  color: #23e783;
+  text-align: center;
+  margin-top: 2vh;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.about-entire-para, .contact-entire-para {
+  margin: 5vh 3vh auto 3vh;;
+}
+
+.leaf-border {
+  display: block;
+  width: 100%;
+  margin: auto;
+  margin-top: 3vh;
+
+}
