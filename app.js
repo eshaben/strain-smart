@@ -1,4 +1,10 @@
 $(document).ready(function() {
+  window.onload = function () {
+  document.getElementById('entrance-button').onclick = function () {
+      document.getElementById('modal').style.display = "none"
+  };
+};
+
   $(".button-collapse").sideNav({
     closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
     draggable: true, // Choose whether you can drag to open on touch screens,
