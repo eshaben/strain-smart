@@ -1,8 +1,12 @@
 $(document).ready(function() {
   window.onload = function () {
-  document.getElementById('entrance-button').onclick = function () {
-      document.getElementById('modal').style.display = "none"
-  };
+    $('#entrance-button').click(function(){
+      $('#modal').hide()
+    })
+  document.getElementById('exit-button').onclick = function () {
+      $('.modal-text').text("Sorry, you must be a valid Medical Marijuana patient or at least 21 years old.")
+      $('.open-buttons').hide()
+    };
 };
 
   $(".button-collapse").sideNav({
