@@ -78,7 +78,7 @@ p.main-text {
   border: 3px solid white;
 }
 
-.about-title, .contact-title, .home-title  {
+.about-title, .contact-title, .home-title, .results-title  {
   color: white;
   font-family: 'Montserrat', sans-serif;
   text-align: center;
@@ -130,4 +130,13 @@ p.main-text {
 .open-buttons{
   border: 2px solid black;
   margin: 2vh;
+}
+
+.main-results-title {
+  margin: 3vh;
+}
+
+.leaf-border.scroll-here {
+  margin-top: 10vh;
+  padding-top: 5vh;
 }
