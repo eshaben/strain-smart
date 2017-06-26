@@ -39,6 +39,8 @@ $(document).ready(function() {
       success: function(data) {
         $('.results').prepend('<img class="leaf-border scroll-here" src="PotLeafBorder.png">')
         $('.main-results-title').text(data.data[0].name)
+        $('.strain-image').attr('src', data.data[0].image)
+        $('.card-text').text(data.data[0].genetics.names)
 
         var ucpc = data.data[0].ucpc
         console.log(data.data[0]);
@@ -70,13 +72,20 @@ $(document).ready(function() {
             }
           console.log(effects);
           console.log(flavors);
+
+
           $.each(effects, function(key, value){
-            $('.results').append('<h5 class="results-para">'+this.key+': '+this.value+'</h5>')
-            $('.results').append('<div class="progress result-data"><div class="determinate" style="width:'+this.value+'"></div></div>')
+            $('#test4').append('<h5 class="results-para">'+this.key+': '+this.value+'</h5>')
+            $('#test4').append('<div class="progress result-data"><div class="determinate" style="width:'+this.value+'"></div></div>')
           })
-          //for search bar on bottom of page 
+          $.each(flavors, function(key, value){
+            $('#test5').append('<h5 class="results-para">'+this.key+': '+this.value+'</h5>')
+            $('#test5').append('<div class="progress result-data"><div class="determinate" style="width:'+this.value+'"></div></div>')
+          })
+          //for search bar on bottom of page
           //  $('.results').append('<form class="search-form"><div class="input-field"><input id="search" class="search-field" type="search" value="" placeholder="e.g. Jack Herer" required><label class="label-icon" for="search"><i class="material-icons small">search</i></label><i class="material-icons close-icon inline">close</i><button class="submit-button" type="submit" name="button">Go!</button></div></form>')
 
+           $('.hide').removeClass()
 
             console.log(data.data);
           }
