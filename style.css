@@ -78,13 +78,13 @@ p.main-text {
   border: 3px solid white;
 }
 
-.about-title, .contact-title, .home-title, .results-title  {
+.about-title, .contact-title, .home-title, .main-results-title  {
   color: white;
   font-family: 'Montserrat', sans-serif;
   text-align: center;
 }
 
-.about-para, .contact-para {
+.about-para, .contact-para, .results-para {
   color: #23e783;
   text-align: center;
   margin-top: 2vh;
@@ -137,6 +137,32 @@ p.main-text {
 }
 
 .leaf-border.scroll-here {
-  margin-top: 10vh;
+  margin-top: 5vh;
+  /*change margin-top to 10vh once you get fixed navbar to work!*/
   padding-top: 5vh;
+}
+
+.progress.result-data {
+  margin: auto;
+  width: 70%;
+  margin-bottom: 5vh;
+}
+
+.progress .determinate {
+  width: 10px;
+  background-color: #f789ff;
+}
+
+.results-para {
+  color: white;
+}
+
+.main-results-title {
+  margin-top: 3vh;
+  margin-bottom: 8vh;
+  color: #23e783;
+}
+
+.results {
+  margin-bottom: 10vh;
 }

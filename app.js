@@ -38,8 +38,7 @@ $(document).ready(function() {
       },
       success: function(data) {
         $('.results').prepend('<img class="leaf-border scroll-here" src="PotLeafBorder.png">')
-        $('.main-results-title').text('Results For ' + data.data[0].name)
-
+        $('.main-results-title').text(data.data[0].name)
 
         var ucpc = data.data[0].ucpc
         console.log(data.data[0]);
@@ -53,11 +52,28 @@ $(document).ready(function() {
             "x-api-key": "a1d66090af7e5d15f41a6007df11f4567ee91f3a"
           },
           success: function(data) {
-            $.each(data.data, function(key, value) {
-              $('.results').append('<h5>'+key+'</h5>').addClass('results-title')
-              $('.results').append('<p>'+value+'</p>').addClass('results-text')
-              console.log(key + ":" + value)
+            var effectsFlavors = []
+            var effects = []
+            var flavors = []
+
+            $.each(data.data, function(key, value){
+              key = (key[0].toUpperCase() + key.slice(1)).replace(/_/g, " ")
+              value = ((value/10)*100).toFixed(1) + '%'
+              effectsFlavors.push(key = {key, value})
             })
+            for (var i =0; i<= 5; i++){
+              effects.push(effectsFlavors[i])
+            }
+            effects.push(effectsFlavors[12])
+            for (var i=6; i <= 11; i++){
+              flavors.push(effectsFlavors[i])
+            }
+          console.log(effects);
+          console.log(flavors);
+          $.each(effects, function(key, value){
+            $('.results').append('<h5 class="results-para">'+this.key+': '+this.value+'</h5>')
+            $('.results').append('<div class="progress result-data"><div class="determinate" style="width:'+this.value+'"></div></div>')
+          })
             console.log(data.data);
           }
         });
