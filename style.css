@@ -146,6 +146,8 @@ p.main-text {
   margin: auto;
   width: 70%;
   margin-bottom: 5vh;
+  height: 2vh;
+  background: white;
 }
 
 .progress .determinate {

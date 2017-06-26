@@ -74,6 +74,10 @@ $(document).ready(function() {
             $('.results').append('<h5 class="results-para">'+this.key+': '+this.value+'</h5>')
             $('.results').append('<div class="progress result-data"><div class="determinate" style="width:'+this.value+'"></div></div>')
           })
+          //for search bar on bottom of page 
+          //  $('.results').append('<form class="search-form"><div class="input-field"><input id="search" class="search-field" type="search" value="" placeholder="e.g. Jack Herer" required><label class="label-icon" for="search"><i class="material-icons small">search</i></label><i class="material-icons close-icon inline">close</i><button class="submit-button" type="submit" name="button">Go!</button></div></form>')
+
+
             console.log(data.data);
           }
         });
