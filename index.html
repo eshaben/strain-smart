@@ -18,25 +18,26 @@
           <button class="open-buttons" id="entrance-button">Yes</button><button class="open-buttons" id="exit-button">No</button>
         </div>
       </div>
-      <nav>
-        <div class="nav-wrapper">
-          <a href="#!" class="brand-logo for-nav"><span class="border-for-logo">STRAIN <span class="black"> SMART</span></span></a>
-          <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-          <ul class="side-nav" id="mobile-demo">
-            <li class="contain"><img class="logo-for-menu" src="logo-1-cropped.png" alt=""></li>
-            <li><a href="#">Home<i class="material-icons">home</i></a></li>
-            <li><a href="about.html">About<i class="material-icons">help</i></a></li>
-            <li><a href="search.html">Search<i class="material-icons">search</i></a></li>
-            <li><a href="contact.html">Contact<i class="material-icons">email</i></a></li>
-          </ul>
-        </div>
-      </nav>
-
+      <div class="navbar-fixed">
+        <nav class="row">
+          <div class="nav-wrapper col s12">
+            <a href="#" class="brand-log"><span class="border-for-logo">STRAIN <span class="black"> SMART</span></span></a>
+            <ul id="nav-mobile" class="right">
+              <li><a href="index.html"><i class="material-icons">search</i></a></li>
+              <li><a href="contact.html"><i class="material-icons">email</i></a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
     </header>
-
-    <main class="main blur-me">
-      <section>
-        <img class="home-image" src="BlackBackgroundLogo.png" alt="">
+    <main class= "container">
+      <section class= "row center">
+        <div class ="col s12">
+        <img src="BlackBackgroundLogo.png" alt="">
+        <h2 class="home-logo hide-on-med-and-down"><span class="strain-home-logo">STRAIN <span class="smart-home-logo"> SMART</span></span></h2>
+      </div>
+      </section>
+      <section class = "search">
         <h5 class="main-text">ENTER A STRAIN</h5>
         <form class="search-form">
           <div class="input-field">
@@ -45,27 +46,26 @@
             <i class="material-icons close-icon inline">close</i>
             <button class="submit-button" type="submit" name="button">Go!</button>
           </div>
-
         </form>
         <p class="main-text">(...we'll help you get a wee[d] bit smarter)</p>
       </section>
-      <section class="results">
+      <section class="results hide center row">
+        <img class = "leaf-border" src="PotLeafBorder.png" alt="">
         <h4 class= "main-results-title"></h4>
-
-        <div class="row hide">
-          <div class="col s12 m7">
+        <div class="row">
+          <div class="col s12 results-card">
             <div class="card">
-              <div class="card-image container">
+              <div class="card-image container center">
                 <img class="strain-image"src="">
-                <span class="main-results-title">Card Title</span>
               </div>
               <div class="card-content">
+                <h6 class= "genetics-title"> Genetics:</h6>
                 <p class= "card-text">I am a very simple card. I am good at containing small bits of information.
                 I am convenient because I require little markup to use effectively.</p>
               </div>
               <div class="card-tabs">
                 <ul class="tabs tabs-fixed-width">
-                  <li class="tab active"><a href="#test4" class="active" selected>Effects</a></li>
+                  <li class="tab"><a href="#test4" class="active" >Effects</a></li>
                   <li class="tab"><a href="#test5">Flavors</a></li>
                 </ul>
                 <div class="card-content">
@@ -74,11 +74,11 @@
                 </div>
             </div>
           </div>
+          <a class="search-again" href="#">Search Again</a>
         </div>
-
-
       </section>
     </main>
+
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>

@@ -9,17 +9,6 @@ $(document).ready(function() {
     })
   };
 
-  $(".button-collapse").sideNav({
-    closeOnClick: true,
-    draggable: true,
-    onOpen: function(el) {
-      $('.blur-me').addClass("blurred")
-    },
-    onClose: function(el) {
-      $('.blur-me').removeClass("blurred")
-    }
-  });
-
   var userInput = ''
   var baseURL = 'https://cors-anywhere.herokuapp.com/https://www.cannabisreports.com/api/v1.0/strains/'
 
@@ -28,6 +17,8 @@ $(document).ready(function() {
     var getSearchQuery = $('.search-field')
     userInput = 'search/' + (getSearchQuery.val()).replace(/ /g, "_")
     console.log(userInput);
+    $('#test4').empty()
+    $('#test5').empty()
 
     $.ajax({
       url: baseURL + userInput,
@@ -37,7 +28,6 @@ $(document).ready(function() {
         "x-api-key": "a1d66090af7e5d15f41a6007df11f4567ee91f3a"
       },
       success: function(data) {
-        $('.results').prepend('<img class="leaf-border scroll-here" src="PotLeafBorder.png">')
         $('.main-results-title').text(data.data[0].name)
         $('.strain-image').attr('src', data.data[0].image)
         $('.card-text').text(data.data[0].genetics.names)
@@ -70,9 +60,6 @@ $(document).ready(function() {
             for (var i=6; i <= 11; i++){
               flavors.push(effectsFlavors[i])
             }
-          console.log(effects);
-          console.log(flavors);
-
 
           $.each(effects, function(key, value){
             $('#test4').append('<h5 class="results-para">'+this.key+': '+this.value+'</h5>')
@@ -82,12 +69,14 @@ $(document).ready(function() {
             $('#test5').append('<h5 class="results-para">'+this.key+': '+this.value+'</h5>')
             $('#test5').append('<div class="progress result-data"><div class="determinate" style="width:'+this.value+'"></div></div>')
           })
+
+          $('.search-again').click(function(){
+            $(window).scrollTop(0)
+          })
           //for search bar on bottom of page
           //  $('.results').append('<form class="search-form"><div class="input-field"><input id="search" class="search-field" type="search" value="" placeholder="e.g. Jack Herer" required><label class="label-icon" for="search"><i class="material-icons small">search</i></label><i class="material-icons close-icon inline">close</i><button class="submit-button" type="submit" name="button">Go!</button></div></form>')
 
            $('.hide').removeClass()
-
-            console.log(data.data);
           }
         });
       }
