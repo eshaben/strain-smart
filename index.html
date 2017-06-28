@@ -1,87 +1,110 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Strain Smart</title>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
-    <link rel="stylesheet" href="style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  </head>
 
-  <body>
-    <header class= "">
-      <div id="modal">
-        <div class="modalcontent">
-          <p class="modal-text">Are you a valid Medical Marijuana Patient or at least 21 years old?</p>
-          <button class="open-buttons" id="entrance-button">Yes</button><button class="open-buttons" id="exit-button">No</button>
+<head>
+  <meta charset="utf-8">
+  <title>Strain Smart</title>
+  <link rel="stylesheet" href="jquery-ui.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+  <header class="">
+    <div id="modal">
+      <div class="modalcontent">
+        <p class="modal-text">Are you a valid Medical Marijuana Patient or at least 21 years old?</p>
+        <button class="open-buttons" id="entrance-button">Yes</button><button class="open-buttons" id="exit-button">No</button>
+      </div>
+    </div>
+    <div class="navbar-fixed">
+      <nav class="row">
+        <div class="nav-wrapper col s12">
+          <a href="#" class="brand-log"><span class="border-for-logo">STRAIN <span class="black"> SMART</span></span></a>
+          <ul id="nav-mobile" class="right">
+            <li><a href="index.html"><i class="material-icons">search</i></a></li>
+          </ul>
         </div>
-      </div>
-      <div class="navbar-fixed">
-        <nav class="row">
-          <div class="nav-wrapper col s12">
-            <a href="#" class="brand-log"><span class="border-for-logo">STRAIN <span class="black"> SMART</span></span></a>
-            <ul id="nav-mobile" class="right">
-              <li><a href="index.html"><i class="material-icons">search</i></a></li>
-              <li><a href="contact.html"><i class="material-icons">email</i></a></li>
-            </ul>
-          </div>
-        </nav>
-      </div>
-    </header>
-    <main class= "container">
-      <section class= "row center">
-        <div class ="col s12">
-        <img src="BlackBackgroundLogo.png" alt="">
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="row center">
+      <div class="col s12">
+        <img src="images/BlackBackgroundLogo.png" alt="">
         <h2 class="home-logo hide-on-med-and-down"><span class="strain-home-logo">STRAIN <span class="smart-home-logo"> SMART</span></span></h2>
       </div>
-      </section>
-      <section class = "search">
-        <h5 class="main-text">ENTER A STRAIN</h5>
-        <form class="search-form">
-          <div class="input-field">
-            <input id="search" class="search-field" type="search" value="" placeholder="e.g. Jack Herer" required>
-            <label class="label-icon" for="search"><i class="material-icons small">search</i></label>
-            <i class="material-icons close-icon inline">close</i>
-            <button class="submit-button" type="submit" name="button">Go!</button>
-          </div>
-        </form>
-        <p class="main-text">(...we'll help you get a wee[d] bit smarter)</p>
-      </section>
-      <section class="results hide center row">
-        <img class = "leaf-border" src="PotLeafBorder.png" alt="">
-        <h4 class= "main-results-title"></h4>
-        <div class="row">
-          <div class="col s12 results-card">
-            <div class="card">
-              <div class="card-image container center">
-                <img class="strain-image"src="">
-              </div>
+    </section>
+    <section class="search">
+      <h5 class="main-text">ENTER A STRAIN</h5>
+      <form class="search-form">
+        <div class="input-field">
+          <div class="ui-widget">
+
+          <input id="search" class="search-field" type="search" value="" placeholder="e.g. Jack Herer" required>
+          <label class="label-icon" for="search"><i class="material-icons small">search</i></label>
+</div>
+          <i class="material-icons close-icon inline">close</i>
+          <button class="submit-button" type="submit" name="button">Go!</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="results hide center row" id="results">
+      <img class="leaf-border" src="images/PotLeafBorder.png" alt="">
+      <h4 class="main-results-title"></h4>
+      <div class="row">
+        <div class="col s12 results-card">
+          <div class="card">
+            <div class="card-image container center">
+              <img class="strain-image" src="">
+            </div>
+            <div class="card-content">
+              <h6 class="genetics-title"> Genetics:</h6>
+              <p class="card-text">I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+            </div>
+            <div class="card-tabs">
+              <ul class="tabs tabs-fixed-width">
+                <li class="tab"><a href="#test4" class="active">Effects</a></li>
+                <li class="tab"><a href="#test5">Flavors</a></li>
+              </ul>
               <div class="card-content">
-                <h6 class= "genetics-title"> Genetics:</h6>
-                <p class= "card-text">I am a very simple card. I am good at containing small bits of information.
-                I am convenient because I require little markup to use effectively.</p>
+                <div id="test4"></div>
+                <div id="test5"></div>
               </div>
-              <div class="card-tabs">
-                <ul class="tabs tabs-fixed-width">
-                  <li class="tab"><a href="#test4" class="active" >Effects</a></li>
-                  <li class="tab"><a href="#test5">Flavors</a></li>
-                </ul>
-                <div class="card-content">
-                  <div id="test4"></div>
-                  <div id="test5"></div>
-                </div>
+            </div>
+
+            <div class="row">
+              <p class="center"><a class="search-again col s12" href="#">Search Again</a></p>
             </div>
           </div>
-          <a class="search-again" href="#">Search Again</a>
         </div>
-      </section>
-    </main>
+    </section>
 
+    <section class="error">
+      <h3 class="error-message"></h3>
+    </section>
+  </main>
 
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
-    <script src="app.js" charset="utf-8"></script>
-  </body>
+  <footer class="page-footer">
+    <div class="footer-copyright">
+      <div class="container">
+        <p class="main-text">(...we'll help you get a wee[d] bit smarter)</p>
+        <p class="contact-para center"><a href="mailto:eshaben@icloud.com"><i class="material-icons small">email</i> Email</a></p>
+        <p class="contact-para center"><a href="https://github.com/eshaben/strain-smart"><img src="images/GitHub-Mark-Light-32px.png" alt=""> GitHub </a></p>
+        <p>&copy; Copyright 2017</p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+  <script src="jquery-ui-1.12.1.custom" charset="utf-8"></script>
+  <script src="app.js" charset="utf-8"></script>
+</body>
+
 </html>
