@@ -116,8 +116,9 @@ $(document).ready(function() {
               )
             })
         }
+      }, error: function(error){
+        $('.error-message').text("Error occurred in loading data. Please try again.")
       }
     });
-
   })
 })
