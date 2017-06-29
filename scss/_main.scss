@@ -2,6 +2,7 @@ body {
   background: $second-color;
 }
 
+
 .home-logo {
   font-family: $primary-font;
 }
@@ -14,9 +15,9 @@ body {
 }
 
 .smart-home-logo {
+  @extend body;
   color: $primary-color;
   border: $border-white;
-  background-color: $second-color;
   border-left: none;
 }
 
@@ -28,8 +29,8 @@ body {
 }
 
 .input-field {
+  @extend body;
   border: $border-black;
-  background-color: $second-color;
   border-radius: 15px;
   margin: auto 5vh;
   padding: 2vh;
@@ -102,7 +103,7 @@ body {
 }
 
 .card, .tabs {
-  background: $second-color;
+  @extend body;
 }
 
 .card-content, .genetics-title, .error-message {
