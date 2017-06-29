@@ -1,3 +1,157 @@
+#modal {
+  position: fixed;
+  font-family: "Montserrat", sans-serif;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 99999;
+  height: 100%;
+  width: 100%; }
 
+.modalcontent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  width: 50%;
+  padding: 20px;
+  text-align: center; }
+
+.open-buttons {
+  border: 3px solid black;
+  margin: 2vh; }
+
+.border-for-logo {
+  border: 3px solid black;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 140%; }
+
+nav {
+  background-color: #23e783; }
+
+body {
+  background: black; }
+
+.home-logo {
+  font-family: "Montserrat", sans-serif; }
+
+.strain-home-logo {
+  border: 3px solid white;
+  color: white;
+  border-right: none;
+  background-color: #23e783; }
+
+.smart-home-logo {
+  color: #23e783;
+  border: 3px solid white;
+  background-color: black;
+  border-left: none; }
+
+.home-image {
+  width: 70%;
+  display: block;
+  margin: auto;
+  margin-top: 7vh; }
+
+.input-field {
+  border: 3px solid black;
+  background-color: black;
+  border-radius: 15px;
+  margin: auto 5vh;
+  padding: 2vh; }
+
+.main-text {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  color: #23e783; }
+
+.close-icon {
+  margin-top: 3vh; }
+
+.submit-button, .search-button {
+  background: #23e783;
+  width: 60%;
+  display: block;
+  margin: auto; }
+
+.submit-button:hover {
+  background-color: rgba(255, 255, 255, 0.3); }
+
+.leaf-border {
+  display: block;
+  width: 100%;
+  margin: auto;
+  margin-top: 3vh; }
+
+.row .col.s12 {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto; }
+
+.row .col {
+  float: none; }
+
+.main-results-title {
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  margin: 3vh; }
+
+.results-para {
+  color: #23e783;
+  text-align: center;
+  margin-top: 2vh;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif; }
+
+.progress.result-data {
+  margin: auto;
+  width: 70%;
+  margin-bottom: 5vh;
+  height: 2vh;
+  background: white; }
+
+.progress .determinate {
+  width: 10px;
+  background: linear-gradient(to right, rgba(35, 231, 131, 0.1), #23e783); }
+
+.card, .tabs {
+  background: black; }
+
+.card-content, .genetics-title, .error-message {
+  color: white;
+  text-align: center; }
+
+.genetics-title {
+  font-size: 110%;
+  font-family: "Montserrat", sans-serif; }
+
+.tabs .tab a {
+  color: white; }
+
+.tabs .tab a:hover, .tabs .tab a.active {
+  color: #23e783; }
+
+.tabs .indicator {
+  background-color: white; }
+
+.btn:hover, .btn-large:hover {
+  background-color: #23e783; }
+
+.loader-hide {
+  display: none; }
+
+footer {
+  background: black !important; }
+
+.material-icons.small {
+  color: white; }
+
+.page-footer .footer-copyright {
+  color: rgba(255, 255, 255, 0.4);
+  background: linear-gradient(black, rgba(255, 255, 255, 0.1)); }
 
 /*# sourceMappingURL=base.css.map */

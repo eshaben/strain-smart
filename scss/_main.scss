@@ -1,0 +1,136 @@
+body {
+  background: $second-color;
+}
+
+.home-logo {
+  font-family: $primary-font;
+}
+
+.strain-home-logo {
+  border: $border-white;
+  color: $third-color;
+  border-right: none;
+  background-color: $primary-color;
+}
+
+.smart-home-logo {
+  color: $primary-color;
+  border: $border-white;
+  background-color: $second-color;
+  border-left: none;
+}
+
+.home-image {
+  width: 70%;
+  display: block;
+  margin: auto;
+  margin-top: 7vh;
+}
+
+.input-field {
+  border: $border-black;
+  background-color: $second-color;
+  border-radius: 15px;
+  margin: auto 5vh;
+  padding: 2vh;
+}
+
+.main-text {
+  text-align: center;
+  font-family: $primary-font;
+  color: $primary-color;
+}
+
+.close-icon {
+  margin-top: 3vh;
+}
+
+.submit-button, .search-button {
+  background: $primary-color;
+  width: 60%;
+  display: block;
+  margin: auto;
+}
+
+.submit-button:hover {
+  background-color: rgba(255, 255, 255, .3);
+}
+
+.leaf-border {
+  display: block;
+  width: 100%;
+  margin: auto;
+  margin-top: 3vh;
+}
+
+.row .col.s12 {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.row .col {
+  float: none;
+}
+
+.main-results-title {
+  color: $third-color;
+  font-family: $primary-font;
+  text-align: center;
+  margin: 3vh;
+}
+
+.results-para {
+  color: $primary-color;
+  text-align: center;
+  margin-top: 2vh;
+  font-size: 16px;
+  font-family: $primary-font;
+}
+
+.progress.result-data {
+  margin: auto;
+  width: 70%;
+  margin-bottom: 5vh;
+  height: 2vh;
+  background: $third-color;
+}
+
+.progress .determinate {
+  width: 10px;
+  background: linear-gradient(to right, rgba(35, 231, 131, 0.1), rgba(35, 231, 131, 1));
+}
+
+.card, .tabs {
+  background: $second-color;
+}
+
+.card-content, .genetics-title, .error-message {
+  color: $third-color;
+  text-align: center;
+}
+
+.genetics-title {
+  font-size: 110%;
+  font-family: $primary-font;
+}
+
+.tabs .tab a {
+  color: $third-color;
+}
+
+.tabs .tab a:hover, .tabs .tab a.active {
+  color: $primary-color;
+}
+
+.tabs .indicator {
+  background-color: $third-color;
+}
+
+.btn:hover, .btn-large:hover {
+  background-color: $primary-color;
+}
+
+.loader-hide {
+  display: none;
+}

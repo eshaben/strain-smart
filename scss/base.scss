@@ -1,0 +1,12 @@
+$primary-color: #23e783;
+$second-color: black;
+$third-color: white;
+$primary-font: 'Montserrat', sans-serif;
+$border-black: 3px solid black;
+$border-white: 3px solid white;
+
+
+@import '_modal';
+@import '_nav';
+@import '_main';
+@import '_footer'

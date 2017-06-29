@@ -1,0 +1,12 @@
+footer {
+  background: $second-color !important;
+}
+
+.material-icons.small {
+  color: $third-color;
+}
+
+.page-footer .footer-copyright {
+  color: rgba(255, 255, 255, .4);
+  background: linear-gradient(black, rgba(255, 255, 255, .1));
+}

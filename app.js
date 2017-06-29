@@ -1,5 +1,3 @@
-
-
 $(document).ready(function() {
   window.onload = function() {
     $('#entrance-button').click(function() {
@@ -23,7 +21,6 @@ $(document).ready(function() {
     $('.error-message').empty()
 
     $('.loader').removeClass('loader-hide')
-
 
     $.ajax({
       url: baseURL + userInput,
@@ -100,13 +97,13 @@ $(document).ready(function() {
               var container = $('body')
               var scrollTo = $('.leaf-border')
               $('.loader').addClass('loader-hide')
-
               $('body').scrollTop(
                 scrollTo.offset().top - container.offset().top + container.scrollTop()
               )
             })
         }
-      }, error: function(error){
+      },
+      error: function(error) {
         var err = error.responseJSON.message
         $('.loader').addClass('loader-hide')
         $('.error-message').text(err)
