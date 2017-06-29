@@ -14,27 +14,16 @@ $(document).ready(function() {
   var userInput = ''
   var baseURL = 'https://cors-anywhere.herokuapp.com/https://www.cannabisreports.com/api/v1.0/strains/'
 
-  // $(function autoComplete(){
-  //   var strains = ['Good Medicine', 'Agent Orange', 'Critical Mass', 'Critical Kush',
-  //     'LSD', 'Durango OG', 'Blue Dream', 'Girl Scout Cookies', 'Jack Herer',
-  //     'Lemon Skunk', 'Harlequin', 'OG Kush', 'Gorilla Glue #4', 'XJ-13', 'Amnesia Haze',
-  //     'Durban Poison', 'Bruce Banner', 'Sour Amnesia'
-  //   ]
-  //
-  //   $('#search').autocomplete({
-  //     source: strains
-  //   })
-  // })
-
-
   $('.submit-button').click(function() {
     event.preventDefault()
     var getSearchQuery = $('.search-field')
     userInput = 'search/' + (getSearchQuery.val()).replace(/ /g, "_")
-    console.log(userInput);
     $('#test4').empty()
     $('#test5').empty()
     $('.error-message').empty()
+
+    $('.loader').removeClass('loader-hide')
+
 
     $.ajax({
       url: baseURL + userInput,
@@ -44,7 +33,6 @@ $(document).ready(function() {
         "x-api-key": "a1d66090af7e5d15f41a6007df11f4567ee91f3a"
       },
       success: function(data) {
-        console.log(data.data);
         if (data.data.length === 0) {
           $('.error-message').text("Sorry, we currently do not have information available for this strain")
         } else {
@@ -58,7 +46,6 @@ $(document).ready(function() {
           }
 
           var ucpc = data.data[0].ucpc
-          console.log(data.data[0]);
           var ucpcURL = ucpc + "/effectsFlavors"
 
           $.ajax({
@@ -71,6 +58,7 @@ $(document).ready(function() {
               success: function(data) {
 
                 if (data.data === false) {
+                  $('.loader').addClass('loader-hide')
                   $('.error-message').text("Currently No Information Available")
                 } else {
                   var effectsFlavors = []
@@ -111,14 +99,19 @@ $(document).ready(function() {
             .then(function() {
               var container = $('body')
               var scrollTo = $('.leaf-border')
+              $('.loader').addClass('loader-hide')
+
               $('body').scrollTop(
                 scrollTo.offset().top - container.offset().top + container.scrollTop()
               )
             })
         }
       }, error: function(error){
-        $('.error-message').text("Error occurred in loading data. Please try again.")
+        var err = error.responseJSON.message
+        $('.loader').addClass('loader-hide')
+        $('.error-message').text(err)
       }
     });
+    $('.search-field').val('');
   })
 })

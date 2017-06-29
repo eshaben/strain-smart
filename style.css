@@ -92,17 +92,15 @@ body {
   margin-top: 3vh;
 }
 
-.submit-button {
-  color: white;
-  background: black;
+.submit-button, .search-button {
+  background: #23e783;
   width: 60%;
   display: block;
   margin: auto;
-  border: 3px solid white;
 }
 
 .submit-button:hover {
-  background-color: #23e783;
+  background-color: rgba(255,255,255,.3);
 }
 
 .leaf-border {
@@ -176,14 +174,8 @@ body {
   background-color: white;
 }
 
-.search-again {
-  color: #9a5fa8;
-  text-align: center;
-  border: 3px solid rgba(255, 255, 255, .7);
-}
-
-.row .col .search-again {
-  padding: 8px;
+.btn:hover, .btn-large:hover {
+  background-color: #23e783;
 }
 
 footer {
@@ -197,4 +189,8 @@ footer {
 .page-footer .footer-copyright {
   color: rgba(255, 255, 255, .4);
   background: linear-gradient(black, rgba(255, 255, 255, .1));
+}
+
+.loader-hide {
+  display: none;
 }
