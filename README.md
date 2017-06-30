@@ -19,6 +19,6 @@ My application can be found on firebase: https://strain-smart.firebaseapp.com/
 * Cannabis Reports API
 
 ## Video
-*coming soon...*
+https://vimeo.com/223824035
  
  
