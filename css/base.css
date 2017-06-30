@@ -139,6 +139,10 @@ body, .smart-home-logo, .input-field, .card, .tabs {
 .loader-hide {
   display: none; }
 
+.strain-image {
+  width: 70% !important;
+  margin: auto; }
+
 footer {
   background: black !important; }
 
