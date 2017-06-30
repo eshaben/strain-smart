@@ -7,13 +7,13 @@ This application is designed to fill the gap between dispensary visits and users
 
 ![screen shot 2017-06-30 at 10 01 28 am](https://user-images.githubusercontent.com/26533957/27744022-39d2585c-5d7b-11e7-93b7-781b57eb1708.png)
 
-##Technologies
+## Technologies
 * Materialize
 * Sass 
 * Cannabis Reports API
 
 
-##Video
+## Video
 *coming soon...*
  
  
