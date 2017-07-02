@@ -19,8 +19,10 @@ $(document).ready(function() {
       },
       success: function(data) {
         if (data.data.length === 0) {
+          emptyResults();
           noStrainError(data)
         } else {
+          $('#results').removeClass('loader-hide')
           appendName(data);
           appendImage(data);
           checkGenetics(data);
@@ -38,6 +40,7 @@ $(document).ready(function() {
               success: function(data) {
                 if (data.data === false) {
                   hideLoader(data);
+                  emptyResults();
                   noStrainError(data);
                 } else {
                   renderData(data)
@@ -51,13 +54,12 @@ $(document).ready(function() {
       },
       error: function(error) {
         var err = error.responseJSON.message
-        hideLoader(data);
+        hideLoader();
         $('.error-message').text(err)
       }
     });
     emptySearchField();
   })
-
 
 
   function hideModal() {
@@ -81,6 +83,7 @@ $(document).ready(function() {
 
   function emptyResults() {
     $('#test4').empty()
+    $('#results').addClass('loader-hide')
     $('#test5').empty()
     $('.error-message').empty()
   }
