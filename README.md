@@ -14,8 +14,11 @@ Simply enter the strain name into the search bar, hit go, and we'll help you get
 My application can be found on firebase: https://strain-smart.firebaseapp.com/
 
 ## Technologies
+* HTML
+* JavaScript
+* jQuery/AJAX
 * Materialize
-* Sass 
+* SASS/SCSS 
 * Cannabis Reports API
 
 ## Video
